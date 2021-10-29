@@ -1,5 +1,5 @@
-const path = require('path'),
-    crypto = require('crypto'),
+// const path = require('path'),
+    const crypto = require('crypto'),
     RxDB = require('rxdb'),
     leveldown = require('leveldown');
 
