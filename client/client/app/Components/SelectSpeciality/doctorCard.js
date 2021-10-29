@@ -18,9 +18,7 @@ function DoctorCard({doctorName}) {
     return (
         <View style={styles.container}>
             <MaterialCommunityIcons name="doctor" size={RFPercentage(8)} color="grey"/>
-
             <AppText style={styles.fontName}>Dr. {doctorName}</AppText>
-
         </View>
     );
 }
