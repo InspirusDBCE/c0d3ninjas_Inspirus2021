@@ -8,7 +8,7 @@ import AppText from '../config/AppText';
 function AppointmentBookingScreen(props) {
     return (
         <Screen>
-              <AppText>appointment booking</AppText>  
+              
 
 
         </Screen>

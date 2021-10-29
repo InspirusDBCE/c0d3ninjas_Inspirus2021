@@ -16,12 +16,12 @@ import AppText from '../../config/AppText';
 
 
 
-function BlueCard({userName}) {
+function BlueCardDoctor({userName}) {
     return (
         <View style={styles.container}>
             <View style={styles.card}>
                 <View style={styles.greeting}>
-                    <AppText style={styles.font}>Please Select A {"\n"}Department</AppText>
+                    <AppText style={styles.font}>Please Select A {"\n"}Doctor</AppText>
                 </View>
 
                 <View style={styles.backgroundImage}>
@@ -37,7 +37,7 @@ function BlueCard({userName}) {
     );
 }
 
-export default BlueCard;
+export default BlueCardDoctor;
 
 
 const styles = StyleSheet.create({
