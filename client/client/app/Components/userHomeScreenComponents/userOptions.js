@@ -27,7 +27,7 @@ function UserOptions(props) {
            subHeading="Setup appointments with the healthcare specialist of your choice" 
            icon="stethoscope" 
            iconSize={RFPercentage(10)}
-           onPress={() => navigation.navigate('AppointmentBooking')}
+           onPress={() => navigation.navigate('SelectSpecialityScreen')}
         >
 
            </UserOptionButtons>
