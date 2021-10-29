@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 
 import { Dimensions } from 'react-native';
 import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
@@ -13,15 +13,18 @@ const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
 
-function DepartmentIcons({iconComponent, specialityName}) {
+function DepartmentIcons({iconComponent, specialityName, onPress}) {
     return (
+        <TouchableOpacity onPress={onPress}>
         <View style={styles.container}>
             <View style={styles.innerContainer}>
                 {iconComponent }  
                     <AppText style={styles.fontStyle}>{specialityName}</AppText>
             </View>
 
+
         </View>
+        </TouchableOpacity>
     );
 }
 

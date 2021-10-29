@@ -9,6 +9,8 @@ import { Dimensions } from 'react-native';
 import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
 import { AntDesign, FontAwesome, Entypo, FontAwesome5,MaterialCommunityIcons     } from '@expo/vector-icons'; 
 import colors from '../config/colors';
+import { useNavigation } from '@react-navigation/native';
+import { sendSpeciality } from '../Functions/Utils';
 
 
 const windowWidth = Dimensions.get('window').width;
@@ -16,6 +18,9 @@ const windowHeight = Dimensions.get('window').height;
 
 
 function SelectSpecialityScreen(props) {
+
+    const navigation = useNavigation();  // navigation prop wasnt being passed like idk why so had to use navigation hook
+
     return (
         <Screen>
             <BlueCard></BlueCard>
@@ -35,7 +40,10 @@ function SelectSpecialityScreen(props) {
                     size={RFPercentage(7)} 
                     color="tomato" />} 
                     
-                    specialityName="Cardiology">
+                    specialityName="Cardiology"
+                    onPress={() => sendSpeciality({navigation, specialityName:"Cardiology"})}
+                    
+                    >
                 
 
                 </DepartmentIcons>
