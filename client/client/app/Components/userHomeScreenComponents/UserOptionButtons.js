@@ -14,9 +14,9 @@ const windowHeight = Dimensions.get('window').height;
 // buttons rendred on the select health services are rendered from this
 // props are passsed to this component by the consumer of the component 
 
-function UserOptionButtons({heading, icon, subHeading, iconSize}) {
+function UserOptionButtons({heading, icon, subHeading, iconSize, onPress}) {
     return (
-        <TouchableOpacity onPress={()=> console.log('h,')}>
+        <TouchableOpacity onPress={onPress}>
         <View style={styles.container}>
             <View style={styles.icon}>
                 <FontAwesome name={icon} size={iconSize} color={colors.white} />

@@ -17,7 +17,7 @@ const windowHeight = Dimensions.get('window').height;
 // main user homepage which consistest of the blue card all all the options the user gets to select 
 
 
-function UserHomePageScreen(props) {
+function UserHomePageScreen({navigation}) {
     return (
             <View style={styles.container}>
 

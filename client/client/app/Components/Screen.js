@@ -9,6 +9,9 @@ import colors from '../config/colors';
 
 import {SafeAreaView} from 'react-native-safe-area-context'
 
+
+
+
 function Screen({children}) {
 
 
