@@ -4,10 +4,10 @@
 
 import React from 'react';
 import {StyleSheet, StatusBar} from 'react-native';
-import Constants from 'expo-constants';
 import colors from '../config/colors';
 
-import { SafeAreaView } from 'react-native-safe-area-context';
+
+import {SafeAreaView} from 'react-native-safe-area-context'
 
 function Screen({children}) {
 

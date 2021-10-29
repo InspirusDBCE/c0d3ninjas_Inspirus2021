@@ -4,25 +4,28 @@ import colors from '../../config/colors';
 import { Dimensions } from 'react-native';
 import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
 
-import { Fontisto } from '@expo/vector-icons'; 
-
-
-import AppText from '../../config/AppText';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
 
-function InfoCard(props) {
+import { Fontisto } from '@expo/vector-icons'; 
+
+
+import AppText from '../../config/AppText';
+
+
+
+function InfoCard({userName}) {
     return (
         <View style={styles.container}>
             <View style={styles.card}>
                 <View style={styles.greeting}>
-                    <AppText style={styles.font}>Welcome{"\n"}Yash</AppText>
+                    <AppText style={styles.font}>Welcome{"\n"}{userName}</AppText>
                 </View>
 
-                <View>
-                <Fontisto name="doctor" size={24} color="darkblue" />
+                <View style={styles.backgroundImage}>
+                <Fontisto name="doctor" size={RFPercentage(19)} color="#1d459c" />
 
                 </View>
 
@@ -43,7 +46,7 @@ const styles = StyleSheet.create({
         backgroundColor:colors.white,
         height:windowHeight/3,
         width:windowWidth,
-       
+        overflow:'hidden'
 
 
     },
@@ -55,7 +58,8 @@ const styles = StyleSheet.create({
         borderBottomLeftRadius:RFPercentage(5),
         borderBottomRightRadius:RFPercentage(5),
         borderWidth:1,
-        backgroundColor:colors.primary
+        backgroundColor:colors.primary,
+        overflow:'hidden'
 
 
     },
@@ -66,6 +70,11 @@ const styles = StyleSheet.create({
         fontSize:RFPercentage(5),
         fontWeight:'bold'
 
+
+    },
+
+    backgroundImage:{
+        marginLeft:windowWidth/1.5,
 
     },
 
