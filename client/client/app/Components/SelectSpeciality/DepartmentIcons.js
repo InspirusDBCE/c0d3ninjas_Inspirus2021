@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     },
 
     fontStyle:{
-        fontSize:RFPercentage(1.7),
+        fontSize:RFPercentage(1.5),
         fontWeight:'bold',
         
 
