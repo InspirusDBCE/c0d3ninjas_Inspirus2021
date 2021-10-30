@@ -9,76 +9,38 @@ import { Dimensions } from 'react-native';
 import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
 import UserOptions from '../Components/userHomeScreenComponents/userOptions';
 
-
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
-
 // main user homepage which consistest of the blue card all all the options the user gets to select 
-
-
 function UserHomePageScreen({navigation}) {
     return (
             <View style={styles.container}>
-
                 <InfoCard userName="Akash"/>
-
                 <View style={styles.headingText}>
                     <AppText style={styles.fontstyle}>Our Health {"\n"}Services</AppText>
                 </View>
-                
                 <UserOptions>
-
-
                 </UserOptions>
-                    
-
-
             </View>
-
-
     );
 }
 
 const styles = StyleSheet.create({
-
-    container:{
-
+    container: {
         backgroundColor:colors.white
-
-
     },
-
-
-    headingText:{
-        marginTop:windowHeight/40,
-        width:windowWidth/3,
+    headingText: {
+        // marginTop:windowHeight/40,
+        width:windowWidth/2,
         backgroundColor:colors.white,
-        marginLeft:windowWidth/30
-
+        marginLeft:windowWidth/30,
+        marginTop: 30,
     },
-
-
-
-
-    fontstyle:{
-
+    fontstyle: {
         color:colors.primary,
         fontSize:RFPercentage(4),
         fontWeight:'bold'
-
-
-
-    }
-
-
-
-
-
-
-    
-
+    },
 })
-
 export default UserHomePageScreen;
-
