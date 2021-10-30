@@ -3,8 +3,10 @@ const path = require('path'),
     RxDB = require('rxdb'),
     leveldown = require('leveldown');
 
-RxDB.addRxPlugin(require('pouchdb-adapter-leveldb'));
-RxDB.addRxPlugin(require('pouchdb-quick-search'));
+RxDB.addPouchPlugin(require('pouchdb-adapter-leveldb'));
+// RxDB.addRxPlugin(require('pouchdb-quick-search'));
+
+// RxDB.addRxPlugin(require('rxdb/plugins/server'));
 
 /**
  * Asserts a condition, and throws a message on violation.
@@ -201,7 +203,7 @@ const appointmentSchema = {
 };
 
 const db = RxDB.createRxDatabase({
-    name: path.join('db/'),
+    name: path.join('db'),
     adapter: leveldown,
     eventReduce: false,
 }).catch(console.error);
@@ -216,6 +218,6 @@ const collections = db.then(database=> database.addCollections({
 
 
 module.exports = {
-    db, collections, 
+    RxDB, db, collections, 
     assert, generateUUID,
 }

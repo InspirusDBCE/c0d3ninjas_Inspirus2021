@@ -1,10 +1,11 @@
+import { getRxStoragePouch } from 'rxdb';
+
 const path = require('path'),
     crypto = require('crypto'),
-    RxDB = require('rxdb'),
-    leveldown = require('leveldown');
+    RxDB = require('rxdb');
 
-RxDB.addRxPlugin(require('pouchdb-adapter-leveldb'));
-RxDB.addRxPlugin(require('pouchdb-quick-search'));
+// RxDB.addPouchPlugin(require('pouchdb-quick-search'));
+RxDB.addPouchPlugin(require('pouchdb-adapter-memory'));
 
 /**
  * Asserts a condition, and throws a message on violation.
@@ -200,9 +201,10 @@ const appointmentSchema = {
     }
 };
 
-export const db = RxDB.createRxDatabase({
-    name: path.join('db/'),
-    adapter: leveldown,
+export const db = RxDB.createRxDatabase({ 
+    name: 'bookMyHospital',
+    storage: getRxStoragePouch('memory'),
+    // adapter: leveldown,
     eventReduce: false,
 }).catch(console.error);
 
