@@ -78,7 +78,7 @@ function SelectSpecialityScreen(props) {
                     size={RFPercentage(7)} 
                     color="#FFE5B4" />} 
                     
-                    specialityName="Cardiology">
+                    specialityName="Gynaecology">
                 
 
                 </DepartmentIcons>

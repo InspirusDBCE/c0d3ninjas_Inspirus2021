@@ -100,16 +100,9 @@ const styles = StyleSheet.create({
         
 
     },
-
-
-
     textContainer:{
         height:windowHeight/8,
         width:windowWidth,
         backgroundColor:colors.white
-
-
     }
-
-
-})
+});
