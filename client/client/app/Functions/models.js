@@ -1,7 +1,4 @@
-import { getRxStoragePouch } from 'rxdb';
-
-const path = require('path'),
-    crypto = require('crypto'),
+const crypto = require('crypto'),
     RxDB = require('rxdb');
 
 // RxDB.addPouchPlugin(require('pouchdb-quick-search'));
