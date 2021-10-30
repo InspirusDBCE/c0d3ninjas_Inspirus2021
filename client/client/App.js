@@ -7,10 +7,11 @@ import {NavigationContainer} from '@react-navigation/native'
 import {createStackNavigator} from '@react-navigation/stack'
 import AppointmentBookingScreen from './app/Screens/appointmentBookingScreen';
 import HomeNavigator from './app/Navigation/HomeNavigator';
-
+// import run from './app/Functions/inup';
 
 
 export default function App() {
+  // run();
   return (
       <Screen>
         <NavigationContainer>

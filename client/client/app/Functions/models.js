@@ -1,26 +1,25 @@
-const crypto = require('crypto'),
-    RxDB = require('rxdb');
+const RxDB = require('rxdb');
 
 // RxDB.addPouchPlugin(require('pouchdb-quick-search'));
 RxDB.addPouchPlugin(require('pouchdb-adapter-memory'));
 
-/**
- * Asserts a condition, and throws a message on violation.
- * @param {boolean} condition Condition to be asserted.
- * @param {string} message Message to throw on condition violation.
- */
-export const assert = (condition, message) => {
-    if(!condition) throw message || 'Assertion failed!';
-    else return true;
-};
+// /**
+//  * Asserts a condition, and throws a message on violation.
+//  * @param {boolean} condition Condition to be asserted.
+//  * @param {string} message Message to throw on condition violation.
+//  */
+// export const assert = (condition, message) => {
+//     if(!condition) throw message || 'Assertion failed!';
+//     else return true;
+// };
 
-/**
- * Generates a random string of characters.
- * @param {number} size Number of random characters to return.
- */
-export const generateUUID = (size) => crypto.rng(size || UUIDSize)
- .toString('base64')
- .replace(/\//gi,'.').replace(/\+/gi,'-').replace(/\=/gi,'_')
+// /**
+//  * Generates a random string of characters.
+//  * @param {number} size Number of random characters to return.
+//  */
+// export const generateUUID = (size) => crypto.rng(size || UUIDSize)
+//  .toString('base64')
+//  .replace(/\//gi,'.').replace(/\+/gi,'-').replace(/\=/gi,'_')
 
 
 const doctorSchema = {
@@ -40,7 +39,7 @@ const doctorSchema = {
         speciality: {
             type: 'string',
             enum: [
-                'GeneralMedicine',
+                'General Medicine',
                 'Cardiology',
                 'Opthalmology',
                 'Pulmonology',
